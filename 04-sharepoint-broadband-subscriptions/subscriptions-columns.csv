@@ -1,0 +1,7 @@
+Column,Type,Example
+DeptCode,Single line of text,FIN01
+PlanName,Single line of text,Home 100
+SpeedMbps,Number,100
+DataGB,Number,500
+MonthlyFee,Currency,
+Status,Choice,Pending

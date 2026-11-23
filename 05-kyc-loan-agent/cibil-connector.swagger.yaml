@@ -1,0 +1,30 @@
+swagger: '2.0'
+info:
+  title: Credit Score API (mock)
+  description: Mock custom connector. Replace host and auth with your real provider.
+  version: '1.0'
+host: api.example.com
+basePath: /v1
+schemes: [https]
+paths:
+  /credit-score:
+    post:
+      operationId: GetCreditScore
+      summary: Get credit score
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              applicantRef: {type: string, description: Reference id, not the Aadhaar number}
+              consent: {type: boolean}
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              score: {type: integer}
+              bureau: {type: string}
