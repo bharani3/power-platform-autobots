@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bharani Priya Muthu Nayagam – Automation Developer, Power Automate & RPA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f6;--surface:#fff;--ink:#0e2233;--muted:#52667a;--line:#cfd9e3;--accent:#2457f5;--accent2:#0f8f7c;--onaccent:#fff;
+--display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1722;--surface:#122434;--ink:#e8eef5;--muted:#93a7ba;--line:#244056;--accent:#6c93ff;--accent2:#3fd0b8;--onaccent:#0b1722;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1722;--surface:#122434;--ink:#e8eef5;--muted:#93a7ba;--line:#244056;--accent:#6c93ff;--accent2:#3fd0b8;--onaccent:#0b1722;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:var(--accent)}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+nav b{font:700 20px var(--display)}
+nav div{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 40px}
+h1{font-size:clamp(38px,7vw,70px);font-weight:700;max-width:14ch;letter-spacing:-.02em}
+.lead{font-size:20px;color:var(--muted);max-width:56ch;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.p{background:var(--accent);color:var(--onaccent)}
+.flow{display:flex;align-items:stretch;margin:44px 0 8px;overflow-x:auto;padding-bottom:6px}
+.node{flex:0 0 auto;width:210px;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:14px 16px}
+.node small{display:block;color:var(--muted);font-size:13px}
+.node strong{font:700 17px var(--display)}
+.node.t{border-left:5px solid var(--accent)}.node.c{border-left:5px solid #d99a00}.node.a{border-left:5px solid var(--accent2)}
+.wire{flex:1 0 56px;position:relative;align-self:center;height:2px;background:var(--line);min-width:56px}
+.wire i{position:absolute;top:-4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--accent);animation:go 2.4s ease-in-out 2 both}
+.wire:nth-of-type(4) i{animation-delay:1.2s}
+@keyframes go{from{left:0}to{left:calc(100% - 10px)}}
+@media (prefers-reduced-motion:reduce){.wire i{animation:none;left:calc(50% - 5px)}html{scroll-behavior:auto}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:28px 0 8px}
+.stat{border-top:3px solid var(--accent);padding-top:10px}
+.stat b{font:700 34px var(--display);display:block}.stat span{color:var(--muted);font-size:15px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,38px);margin-bottom:28px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.skills h3{font-size:19px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 10px;font-size:15px}
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 32px 26px}
+.job:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.job h3{font-size:21px}.job .when{color:var(--muted);font-size:15px;margin:2px 0 8px}
+.job ul{margin:8px 0 0;padding-left:20px}.job li{margin:4px 0}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.proj h3{font-size:21px;margin-bottom:10px}
+.proj p{margin:8px 0;font-size:16px}.proj p b{color:var(--accent2)}
+.proj .res{border-top:1px solid var(--line);margin-top:12px;padding-top:12px;font-weight:500}
+.certs{display:flex;flex-wrap:wrap;gap:12px}
+.certs div{border:1.5px solid var(--accent);border-radius:8px;padding:10px 16px}
+.certs small{display:block;color:var(--muted)}
+footer{padding:48px 0 64px;border-top:1px solid var(--line)}
+footer h2{margin-bottom:12px}
+footer p{color:var(--muted);max-width:52ch}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
+.proj ul{margin:8px 0 0;padding-left:20px;font-size:16px}.proj li{margin:4px 0}.note{font-size:14px;color:var(--muted);margin-top:32px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Bharani Priya</b><div><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<h1>I turn manual work into reliable automation.</h1>
+<p class="lead">I’m Bharani Priya Muthu Nayagam, an application developer at IBM India. I bring 14 years of enterprise IT experience, and for the last 5 I’ve focused on RPA and Microsoft Power Automate, connecting cloud flows, desktop bots and legacy systems.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+
+<div class="flow" aria-label="Example automation flow">
+<div class="node t"><small>Trigger</small><strong>Java app calls REST API</strong></div>
+<div class="wire"><i></i></div>
+<div class="node c"><small>Condition</small><strong>Cloud flow validates request</strong></div>
+<div class="wire"><i></i></div>
+<div class="node a"><small>Action</small><strong>Desktop flow creates ticket</strong></div>
+</div>
+
+<div class="stats">
+<div class="stat"><b>14 years</b><span>in software and IT delivery</span></div>
+<div class="stat"><b>5 years</b><span>in RPA and process automation</span></div>
+<div class="stat"><b>4.5 years</b><span>building with Power Automate</span></div>
+</div>
+</header>
+
+<section id="skills"><h2>What I work with</h2>
+<div class="skills">
+<div><h3>Power Platform and automation</h3><div class="tags"><span>Power Automate Cloud Flows</span><span>Power Automate Desktop</span><span>RPA</span><span>Workflow automation</span><span>Legacy application automation</span><span>Dynamics 365</span><span>Copilot Studio</span></div></div>
+<div><h3>Apps and integration</h3><div class="tags"><span>Canvas apps</span><span>Model-driven apps</span><span>Dataverse</span><span>SharePoint</span><span>REST and SOAP APIs</span><span>Custom connectors</span><span>JSON</span><span>Excel automation</span></div></div>
+<div><h3>Engineering</h3><div class="tags"><span>Java</span><span>JavaScript</span><span>SQL</span><span>Linux</span><span>Error and exception handling</span><span>Logging and monitoring</span><span>Debugging</span><span>Production support</span></div></div>
+<div><h3>Cloud, DevOps and delivery</h3><div class="tags"><span>Azure</span><span>Jenkins and CI/CD</span><span>GitHub</span><span>SonarQube, SAST, DAST</span><span>Selenium</span><span>UiPath</span><span>Automation Anywhere</span><span>Agile and Scrum</span></div></div>
+</div></section>
+
+<section id="experience"><h2>Experience</h2>
+<div class="tl">
+<div class="job"><h3>Automation Developer, Power Automate and RPA</h3><div class="when">IBM India Pvt Ltd, 2022 to present</div>
+<ul><li>Design and deliver end-to-end automation across cloud flows, desktop flows, SharePoint, Excel and REST APIs.</li><li>Build reusable child flows with validation, logging, notifications and monitoring.</li><li>Troubleshoot production issues quickly and report status, risks and mitigations to management.</li><li>Build canvas and model-driven apps on Power Platform, from design through deployment and support.</li></ul></div>
+<div class="job"><h3>Scrum Master and Rational Tools Administrator</h3><div class="when">IBM India Pvt Ltd, 2019 to 2022</div>
+<ul><li>Ran Agile ceremonies, delivery tracking and continuous improvement for the team.</li><li>Administered Rational tools to support engineering governance and development processes.</li></ul></div>
+<div class="job"><h3>Java Application Developer</h3><div class="when">IBM India Pvt Ltd, 2012 to 2018</div>
+<ul><li>Developed and supported enterprise Java applications for telecom business operations.</li><li>Worked across requirements, development, testing, debugging, release and production support on Linux and legacy systems.</li></ul></div>
+</div></section>
+
+<section id="projects"><h2>Selected projects</h2>
+<div class="projects">
+<div class="proj"><h3>Cloud-to-desktop automation</h3><p><b>What it does</b> A Java application triggers a Power Automate cloud flow over an HTTP request, which hands off to a desktop flow that creates tickets in a legacy application.</p><p class="res">Joins Java, REST APIs, cloud flows and PAD into one pipeline.</p></div>
+<div class="proj"><h3>Telecom order and ticket automation</h3><p><b>What it does</b> Routes orders through multiple work centers and downstream streams, with status tracking, notifications and follow-up actions.</p><p class="res">Less manual handling, clearer process visibility.</p></div>
+<div class="proj"><h3>Bulk ticket creation from Excel</h3><p><b>What it does</b> Creates service tickets in bulk from structured Excel files, with validation, duplicate checks, exception handling and automated logging.</p><p class="res">Consistent, accurate ticket creation with less effort.</p></div>
+<div class="proj"><h3>Security change automation</h3><p><b>What it does</b> Reads IP address lists from Excel to create and update firewall rules, with approval workflows, validation and an audit log.</p><p class="res">Controlled, traceable network change management.</p></div>
+<div class="proj"><h3>SharePoint broadband subscriptions</h3><p><b>What it does</b> Tracks broadband subscriptions in SharePoint by department, plan speed (Mbps) and data size (GB). A Power Automate flow matches department codes to subscription records, validates the data and updates the fee for each plan automatically.</p><p class="res">Better data accuracy, less manual checking.</p></div>
+<div class="proj"><h3>KYC and loan agent</h3><p><b>Front end</b> A Copilot Studio agent chats with the applicant or loan officer, collects the loan request and Aadhaar details, and explains the status in plain language.</p><p><b>Background checks</b> The agent calls Power Automate cloud flows that verify KYC and fetch the CIBIL score through an API. Strong scores are auto-approved, low scores rejected, and borderline cases go to a manager for approval.</p><p><b>Tracking</b> Cases and audit logs sit in Dataverse, with a model-driven app for the team.</p><p class="res">Faster, consistent loan screening, with Aadhaar numbers masked.</p></div>
+</div></section>
+
+<section><h2>Certification</h2>
+<div class="certs"><div>Microsoft Certified: Azure Fundamentals<small>AZ-900</small></div></div></section>
+
+<footer id="contact"><h2>Let’s automate something.</h2>
+<p>I’m open to RPA and Power Automate roles, contract work and consulting. Send me a process you’d like to stop doing by hand.</p>
+<div class="links"><a href="mailto:bharanipriyatce@gmail.com">bharanipriyatce@gmail.com</a><a href="https://www.linkedin.com/in/bharani-priya-muthu-nayagam-2bb3901b/">LinkedIn</a><a href="https://github.com/bharani3/power-platform-autobots">GitHub: power-platform-autobots</a></div>
+<p class="note">Based in Tamil Nadu, India.</p>
+</footer>
+</div>
+</body>
+</html>
